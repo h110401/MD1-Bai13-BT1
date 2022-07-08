@@ -9,15 +9,22 @@
 <script>
 
     function isPrime(number) {
-        for (let i = 2; i <= Math.sqrt(number); i++) {
-            if (number % i == 0) {
-                return false;
+        if (number > 1) {
+            for (let i = 2; i <= Math.sqrt(number); i++) {
+                if (number % i == 0) {
+                    return false;
+                }
             }
+            return true;
+        } else {
+            return false;
         }
-        return true;
+
     }
 
-    console.log(isPrime('1567'));
+    let check = prompt('Nhập số để kiểm tra: ');
+
+    document.write(isPrime(check));
 
 </script>
 
